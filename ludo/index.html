@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="turn">
+        <button class="turnbtn" id="turnBtn" onclick="GenerateRandomNumber();">Take</button>
+        <div class="textturn">Its <span class="colorturn" id="ChoosePlayer">Red</span>`s Turn</div>
+    </div>
+<div class="dice">
+    <div class="dice1" id="dice1">
+        <div class="dice1-dot1 dot"></div>
+    </div>
+    <div class="dice2" id="dice2">
+                <div class="dice2-dot1 dot"></div>
+                <div class="dice2-dot2 dot"></div> 
+    </div>
+    <div class="dice3" id="dice3">
+        <div class="dice3-dot1 dot"></div>
+        <div class="dice3-dot2 dot"></div> 
+        <div class="dice3-dot3 dot"></div>
+    </div>
+    <div class="dice4" id="dice4">
+        <div class="dice4-dot1 dot"></div>
+        <div class="dice4-dot2 dot"></div> 
+        <div class="dice4-dot3 dot"></div>
+        <div class="dice4-dot4 dot"></div>
+    </div>
+    <div class="dice5" id="dice5">
+        <div class="dice5-dot1 dot"></div>
+        <div class="dice5-dot2 dot"></div> 
+                <div class="dice5-dot3 dot"></div>
+                <div class="dice5-dot4 dot"></div>
+                <div class="dice5-dot5 dot"></div>
+            </div>
+            <div class="dice6" id="dice6">
+                <div class="dice6-dot1 dot"></div>
+                <div class="dice6-dot2 dot"></div> 
+                <div class="dice6-dot3 dot"></div>
+                <div class="dice6-dot4 dot"></div>
+                <div class="dice6-dot5 dot"></div>
+                <div class="dice6-dot6 dot"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="one">
+            <div class="one-one">
+                <!-- //////////////////////////////////// -->
+                <div class="goti-green-one goti" id="got1_green" onclick="movegoti('Green',1)"></div>
+                <div class="goti-green-two goti" id="got2_green" onclick="movegoti('Green',2)"></div>
+                <div class="goti-green-three goti" id="got3_green" onclick="movegoti('Green',3)"></div>
+                <div class="goti-green-four goti" id="got4_green" onclick="movegoti('Green',4)"></div>
+                <!-- //////////////////////////////////// -->
+                <div class="round" id="round1"><div class="goti-area">
+                    <div class="goti-area-one"></div>
+                    <div class="goti-area-two"></div>
+                    <div class="goti-area-three"></div>
+                    <div class="goti-area-four"></div>
+                </div></div>
+            </div>
+            <div class="one-two">
+                <div class="one-line1">
+                    <div class="place one-two-line1-got1 line1-got1"><div class="arrow arrow-one-1"><b>></b></div></div>
+                    <div class="place one-two-line1-got2 line1-got2"><div class="arrow arrow-one-2"><b>></b></div></div>
+                    <div class="place one-two-line1-got3 line1-got3 qqq"><div class="arrow arrow-one-3"><b>></b></div></div>
+                    <div class="place one-two-line1-got4 line1-got4"><div class="arrow arrow-one-4"><b>></b></div></div>
+                    <div class="place one-two-line1-got5 line1-got5"><div class="arrow arrow-one-5"><b>></b></div></div>
+                    <div class="place one-two-line1-got6 line1-got6"><div class="arrow arrow-one-6"><b>></b></div></div>
+                </div>
+                <div class="one-line2">
+                    <div class="place one-two-line2-got1 line2-got1 qqq"><div class="arrow arrow-two-1"><b>></b></div></div>
+                    <div class="place one-two-line2-got2 line2-got2 qqq"><div class="arrow arrow-two-2"><b>></b></div></div>
+                    <div class="place one-two-line2-got3 line2-got3 qqq"><div class="arrow arrow-two-3"><b>></b></div></div>
+                    <div class="place one-two-line2-got4 line2-got4 qqq"><div class="arrow arrow-two-4"><b>></b></div></div>
+                    <div class="place one-two-line2-got5 line2-got5 qqq"><div class="arrow arrow-two-5"><b>></b></div></div>
+                    <div class="place one-two-line2-got6 line2-got6 qqq"><div class="arrow arrow-two-6 extra"><b>></b></div></div></div>
+                <div class="one-line3">
+                    <div class=" place one-two-line3-got1 line3-got1"><div class="arrow arrow-three-1"><b>></b></div></div>
+                    <div class=" place one-two-line3-got2 line3-got2 qqq"><div class="arrow arrow-three-2"><b>></b></div></div>
+                    <div class=" place one-two-line3-got3 line3-got3"><div class="arrow arrow-three-3"><b>></b></div></div>
+                    <div class=" place one-two-line3-got4 line3-got4"><div class="arrow arrow-three-4"><b>></b></div></div>
+                    <div class=" place one-two-line3-got5 line3-got5"><div class="arrow arrow-three-5"><b>></b></div></div>
+                    <div class=" place one-two-line3-got6 line3-got6"><div class="arrow arrow-three-6"><b>></b></div></div></div>
+            </div>
+            <div class="one-three">
+                            <!-- red  -->
+            <div class="goti-red-one goti" id="got1_red" onclick="movegoti('red',1);"></div>
+            <div class="goti-red-two goti" id="got2_red" onclick="movegoti('red',2);"></div>
+            <div class="goti-red-three goti" id="got3_red" onclick="movegoti('red',3);"></div>
+            <div class="goti-red-four goti" id="got4_gred" onclick="movegoti('red',4);"></div>
+
+                <div class="round" id="round2">
+                    <div class="goti-area">
+                        <div class="goti-area-one"></div>
+                        <div class="goti-area-two"></div>
+                        <div class="goti-area-three"></div>
+                        <div class="goti-area-four"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="two">
+            <div class="two-one">
+
+                    <div class="two-line1">
+                        <div class="two-one-line1-got1 line1-got1"><div class="arrow arrow-one-21"><b>></b></div></div>
+                        <div class="two-one-line1-got2 line1-got2 aaa"><div class="arrow arrow-one-22"><b>></b></div></div>
+                        <div class="two-one-line1-got3 line1-got3"><div class="arrow arrow-one-23"><b>></b></div></div>
+                        <div class="two-one-line1-got4 line1-got4"><div class="arrow arrow-one-24"><b>></b></div></div>
+                        <div class="two-one-line1-got5 line1-got5"><div class="arrow arrow-one-25"><b>></b></div></div>
+                        <div class="two-one-line1-got6 line1-got6"><div class="arrow arrow-one-26"><b>></b></div></div>
+                    </div>
+                    <div class="two-line2">
+                        <div class="two-one-line2-got1 line2-got1 aaa"><div class="arrow arrow-two-21"><b>></b></div></div>
+                        <div class="two-one-line2-got2 line2-got2 aaa"><div class="arrow arrow-two-22"><b>></b></div></div>
+                        <div class="two-one-line2-got3 line2-got3 aaa"><div class="arrow arrow-two-23"><b>></b></div></div>
+                        <div class="two-one-line2-got4 line2-got4 aaa"><div class="arrow arrow-two-24"><b>></b></div></div>
+                        <div class="two-one-line2-got5 line2-got5 aaa"><div class="arrow arrow-two-25"><b>></b></div></div>
+                        <div class="two-one-line2-got6 line2-got6 aaa"><div class="arrow arrow-two-26"><b>></b></div></div></div>
+                    <div class="two-line3">
+                        <div class="two-one-line3-got1 line3-got1"><div class="arrow arrow-three-21"><b>></b></div></div>
+                        <div class="two-one-line3-got2 line3-got2"><div class="arrow arrow-three-22"><b>></b></div></div>
+                        <div class="two-one-line3-got3 line3-got3 aaa"><div class="arrow arrow-three-23"><b>></b></div></div>
+                        <div class="two-one-line3-got4 line3-got4"><div class="arrow arrow-three-24"><b>></b></div></div>
+                        <div class="two-one-line3-got5 line3-got5"><div class="arrow arrow-three-25"><b>></b></div></div>
+                        <div class="two-one-line3-got6 line3-got6"><div class="arrow arrow-three-26"><b>></b></div></div></div>
+                </div>
+            <div class="two-two">
+                <div class="exit1 exit">Exit</div>
+                <div class="exit2 exit">Exit</div>
+                <div class="exit3 exit">Exit</div>
+                <div class="exit4 exit">Exit</div>
+            </div>
+            <div class="two-three">
+
+                <div class="two-line1 abc">
+                    <div class="two-one-line1-got1 line1-got1"><div class="arrow arrow-one-21"><b>></b></div></div>
+                    <div class="two-one-line1-got2 line1-got2"><div class="arrow arrow-one-22"><b>></b></div></div>
+                    <div class="two-one-line1-got3 line1-got3"><div class="arrow arrow-one-23"><b>></b></div></div>
+                    <div class="two-one-line1-got4 line1-got4 bbb"><div class="arrow arrow-one-24"><b>></b></div></div>
+                    <div class="two-one-line1-got5 line1-got5"><div class="arrow arrow-one-25"><b>></b></div></div>
+                    <div class="two-one-line1-got6 line1-got6"><div class="arrow arrow-one-26"><b>></b></div></div>
+                </div>
+                <div class="two-line2 abc1">
+                    <div class="two-one-line2-got1 line2-got1 bbb"><div class="arrow arrow-two-21"><b>></b></div></div>
+                    <div class="two-one-line2-got2 line2-got2 bbb"><div class="arrow arrow-two-22"><b>></b></div></div>
+                    <div class="two-one-line2-got3 line2-got3 bbb"><div class="arrow arrow-two-23"><b>></b></div></div>
+                    <div class="two-one-line2-got4 line2-got4 bbb"><div class="arrow arrow-two-24"><b>></b></div></div>
+                    <div class="two-one-line2-got5 line2-got5 bbb"><div class="arrow arrow-two-25"><b>></b></div></div>
+                    <div class="two-one-line2-got6 line2-got6 bbb"><div class="arrow arrow-two-26"><b>></b></div></div></div>
+                <div class="two-line3 abc2">
+                    <div class="two-one-line3-got1 line3-got1"><div class="arrow arrow-three-21"><b>></b></div></div>
+                    <div class="two-one-line3-got2 line3-got2"><div class="arrow arrow-three-22"><b>></b></div></div>
+                    <div class="two-one-line3-got3 line3-got3"><div class="arrow arrow-three-23"><b>></b></div></div>
+                    <div class="two-one-line3-got4 line3-got4"><div class="arrow arrow-three-24"><b>></b></div></div>
+                    <div class="two-one-line3-got5 line3-got5 bbb"><div class="arrow arrow-three-25"><b>></b></div></div>
+                    <div class="two-one-line3-got6 line3-got6"><div class="arrow arrow-three-26"><b>></b></div></div></div>
+            </div>
+        </div>
+        <div class="three">
+            <div class="three-one">
+                <!-- ????????????????????????????????????????????????????????????????// -->
+                <!-- ????????????????????????????????????????????????????????????????// -->
+            <div class="goti-yellow-one goti" id="got1_yellow" onclick="movegoti('yellow',1);"></div>
+            <div class="goti-yellow-two goti" id="got2_yellow"onclick="movegoti('yellow',2);">></div>
+            <div class="goti-yellow-three goti" id="got3_yellow" onclick="movegoti('yellow',3);"></div>
+            <div class="goti-yellow-four goti" id="got4_yellow" onclick="movegoti('yellow',4);"></div>
+            <!-- ????????????????????????????????????????????????????????????????// -->
+            <!-- ????????????????????????????????????????????????????????????????// -->
+                <div class="round" id="round3">
+                    <div class="goti-area">
+                        <div class="goti-area-one"></div>
+                        <div class="goti-area-two"></div>
+                        <div class="goti-area-three"></div>
+                        <div class="goti-area-four"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="three-two">
+
+                <div class="one-two">
+                    <div class="one-line1">
+                        <div class="one-two-line1-got1 line1-got1"><div class="arrow arrow-one-1"><b>></b></div></div>
+                        <div class="one-two-line1-got2 line1-got2"><div class="arrow arrow-one-2"><b>></b></div></div>
+                        <div class="one-two-line1-got3 line1-got3"><div class="arrow arrow-one-3"><b>></b></div></div>
+                        <div class="one-two-line1-got4 line1-got4"><div class="arrow arrow-one-4"><b>></b></div></div>
+                        <div class="one-two-line1-got5 line1-got5 ccc"><div class="arrow arrow-one-5"><b>></b></div></div>
+                        <div class="one-two-line1-got6 line1-got6"><div class="arrow arrow-one-6"><b>></b></div></div>
+                    </div>
+                    <div class="one-line2">
+                        <div class="one-two-line2-got1 line2-got1 abcccc ccc"><div class="arrow extra1 arrow-two-1"><b>></b></div></div>
+                        <div class="one-two-line2-got2 line2-got2 abcccc ccc"><div class="arrow arrow-two-2"><b>></b></div></div>
+                        <div class="one-two-line2-got3 line2-got3 abcccc ccc"><div class="arrow arrow-two-3"><b>></b></div></div>
+                        <div class="one-two-line2-got4 line2-got4 abcccc ccc"><div class="arrow arrow-two-4"><b>></b></div></div>
+                        <div class="one-two-line2-got5 line2-got5 abcccc ccc"><div class="arrow arrow-two-5"><b>></b></div></div>
+                        <div class="one-two-line2-got6 line2-got6 abcccc ccc "><div class="arrow arrow-two-6"><b>></b></div></div></div>
+                    <div class="one-line3">
+                        <div class="one-two-line3-got1 line3-got1"><div class="arrow arrow-three-1"><b>></b></div></div>
+                        <div class="one-two-line3-got2 line3-got2"><div class="arrow arrow-three-2"><b>></b></div></div>
+                        <div class="one-two-line3-got3 line3-got3"><div class="arrow arrow-three-3"><b>></b></div></div>
+                        <div class="one-two-line3-got4 line3-got4 ccc"><div class="arrow arrow-three-4"><b>></b></div></div>
+                        <div class="one-two-line3-got5 line3-got5"><div class="arrow arrow-three-5"><b>></b></div></div>
+                        <div class="one-two-line3-got6 line3-got6"><div class="arrow arrow-three-6 "><b>></b></div></div></div>
+                </div>
+            </div>
+            <div class="three-three">
+                <!-- bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb -->
+                <!-- bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb -->
+            <div class="goti-blue-one goti" id="got1_blue" onclick="movegoti('blue',1);"></div>
+            <div class="goti-blue-two goti" id="got2_blue" onclick="movegoti('blue',2);"></div>
+            <div class="goti-blue-three goti" id="got3_blue" onclick="movegoti('blue',3);"></div>
+            <div class="goti-blue-four goti" id="got4_blue" onclick="movegoti('blue',4);"></div>
+            <!-- bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb -->
+            <!-- bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb -->
+                <div class="round" id="round4">
+                    <div class="goti-area">
+                        <div class="goti-area-one"></div>
+                        <div class="goti-area-two"></div>
+                        <div class="goti-area-three"></div>
+                        <div class="goti-area-four"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup">
+        <img src="cross.png" alt="">
+        <h2 id="alert">Thank You!</h2>
+        <p id="para">Your Details Has Been Submited</p>
+    </div>
+    <div class="popup1" id="popup1">
+        <img src="tick.png" alt="">
+        <h2 id="alert1">Thank You!</h2>
+        <p id="para1">Your Details Has Been Submited</p>
+    </div>
+</body>
+</html>
+<script src="script.js"></script>
